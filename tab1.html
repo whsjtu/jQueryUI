@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>jQuery UI Example Page</title>
-		<link href="jqueryui/css/redmond/jquery-ui-1.10.2.custom.css" rel="stylesheet">
+		<link href="jqueryui/css/redmond/jquery-ui-1.10.2.custom.css" rel="stylesheet" />
 		<!--style type="text/css">
 			li.ui-state-default {
 				font-size: 10px;
@@ -14,6 +14,15 @@
 				font-style: italic;
 			}
 		</style-->
+		<style type="text/css">
+			#accordion {
+				width: 500px;
+			}
+
+			.no-close .ui-dialog-titlebar-close {
+  				display: none;
+			}
+		</style>
 		<script src="jqueryui/js/jquery-1.9.1.js"></script>
 		<script src="jqueryui/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="tab1.js"></script>
@@ -30,6 +39,18 @@
 			<div id="tab2">Contents of second tab</div>
 			<div id="tab3">Contents of third tab</div>
 		</div>
-		
+		<div id="accordion">
+			<h1><a>Menu 1</a></h1>
+			<div>Menu contents 1</div>
+			<h1><a>Menu 2</a></h1>
+			<div>Menu contents 2</div>
+			<h1><a>Menu 3</a></h1>
+			<div>Menu contents 3</div>
+		</div>
+		<div id="dialog" title="Window title">
+			<p>Content of the dialog box</p>
+		</div>
+		<!--input type="button" id="open" value="open" />
+		<input type="button" id="close" value="close" /-->
 	</body>
 </html>
