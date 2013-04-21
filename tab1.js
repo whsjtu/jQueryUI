@@ -19,7 +19,7 @@ $(document).ready(function(){
     	else $('#dialog').dialog('close');
     });
    */
-    $('#dialog').dialog({
+     /*$('#dialog').dialog({
     	show: "bounce",
     	hide: "pulsate"
     }).dialog({
@@ -27,5 +27,18 @@ $(document).ready(function(){
     		if(!confirm('Close dialog?'))
     			return false;
     	}	
-    }); 
+    });
+
+    $('#dialog').dialog({
+        buttons: {
+            'YES': function() {
+                $('#dialog').dialog('close');
+            },
+            'NO': function() {
+
+            }
+        }
+    }).prev().find('.ui-dialog-titlebar-close').hide(); */
+
+    $('#button1, #button2').button();
 });
