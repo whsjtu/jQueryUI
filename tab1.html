@@ -3,7 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>jQuery UI Example Page</title>
-		<link href="jqueryui/css/redmond/jquery-ui-1.10.2.custom.css" rel="stylesheet" />
+		
+		
+		<script src="jqueryui/js/jquery-1.9.1.js"></script>
+		<script src="jqueryui/js/jquery-ui-1.10.2.custom.js"></script>
+		
+		<link href="jqueryui/css/smoothness/jquery-ui-1.10.2.custom.css" rel="stylesheet" />
 		<!--style type="text/css">
 			li.ui-state-default {
 				font-size: 10px;
@@ -14,19 +19,8 @@
 				font-style: italic;
 			}
 		</style-->
-		<style type="text/css">
-			#accordion {
-				width: 500px;
-			}
-
-			.no-close .ui-dialog-titlebar-close {
-  				display: none;
-			}
-		</style>
-		<script src="jqueryui/js/jquery-1.9.1.js"></script>
-		<script src="jqueryui/js/jquery-ui-1.10.2.custom.js"></script>
-		<script src="tab1.js"></script>
-
+		<link href="extend.css" rel="stylesheet" />
+        <script src="tab1.js"></script>
 	</head>
 	<body>
 		<div id="tabs">
@@ -52,5 +46,50 @@
 		</div-->
 		<span id="button1">Button 1</span>
 		<span id="button2">Button 2</span>
+		<br />
+		<div class="buttonset">
+			gender:
+			<input type="radio" name="gender" id="m"><label for="m">Male</label></input>
+			<input type="radio" name="gender" id="f"><label for="f">Female</label></input>
+		</div>
+		<div class="buttonset">
+			<p>Select the colors that you like:</p>
+			<input type="checkbox" name="red" id="idred"><label for="idred">red</label></input>
+			<input type="checkbox" name="green" id="idgreen"><label for="idgreen">green</label></input>
+			<input type="checkbox" name="blue" id="idblue"><label for="idblue">blue</label></input>
+			<input type="checkbox" name="red" id="idyellow"><label for="idyellow">yellow</label></input>
+		</div>
+		<span id="volume">volume</span>
+		<br />
+
+		<!--div id="calc">
+			<div id="result"><span>0</span></div>
+			<div class="touches">
+				<span>7</span><span>8</span><span>9</span><span>/</span>
+			</div>
+			<div class="touches">
+				<span>4</span><span>5</span><span>6</span><span>*</span>
+			</div>
+			<div class="touches">
+				<span>1</span><span>2</span><span>3</span><span>-</span>
+			</div>
+			<div class="touches">
+				<span>0</span><span>.</span><span>=</span><span>+</span>
+			</div>
+		</div-->
+
+		Progress:
+		<div id="progressbar"></div>
+		<div id="percent" style="text-align: center">0</div>
+		<h3>Slider</h3>
+		<img src="images/slider.jpg" /><br /><br />
+		<div id="slider"></div><br />
+		Start: <span id="valuestart"></span><br />
+		Stop: <span id="valuestop"></span><br />
+		Change: <span id="valuechange"></span><br />
+		Slider: <span id="valueslide"></span><br />
+
+		<h3>click to select a date:</h3>
+		<input type="text" id="date" />
 	</body>
 </html>

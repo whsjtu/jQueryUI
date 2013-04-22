@@ -1,0 +1,30 @@
+#accordion {
+				width: 500px;
+			}
+
+/*.no-close .ui-dialog-titlebar-close {
+  				display: none;
+			}*/
+#calc {float: right;}
+
+.touches span.ui-button-text-only {
+	width: 60px;
+}
+
+#calc div.ui-button-text-only {
+	width: 230px;
+	text-align: right;
+}
+
+#calc div.ui-button-text-only.ie {
+	width: 230px;
+}
+
+#progressbar.ui-progressbar, #percent, #slider {
+	height: 20px;
+	width: 300px;
+}
+
+#date {
+	float: right;
+}
