@@ -40,4 +40,6 @@ $(document).ready(function() {
 			$(ui.draggable).css({position: 'relative', top: '0px', left: '0px'}).removeClass('bought');
 		}
 	});
+
+	$('#div2').selectable();
 });

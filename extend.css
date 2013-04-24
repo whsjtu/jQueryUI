@@ -43,3 +43,6 @@
 .hover {
 	border-color: red;
 }
+p.ui-selected {
+	background-color: gainsboro;
+}
