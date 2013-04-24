@@ -25,6 +25,21 @@
 	width: 300px;
 }
 
-#date {
+#date, #autocomplete{
 	float: right;
+}
+#autocomplete {
+	margin: 20px;
+}
+
+#date {
+	role:None;
+}
+
+.basket {
+	border: transparent solid 2px;
+}
+
+.hover {
+	border-color: red;
 }

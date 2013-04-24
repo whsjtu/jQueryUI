@@ -112,7 +112,49 @@ $(document).ready(function(){
     }).slider('value', 100);
 
 
-    $('#date').datepicker({
-        showAnim: 'bounce'
+    $.datepicker.setDefaults({
+        showOn: 'both',
+        buttonImageOnly: true,
+        buttonImage: 'images/icon-rel-tag.png',
+        buttonText: 'calendar'
     });
+    /*
+    $('#date').datepicker({
+        //showAnim: 'bounce',
+        //showOtherMonths: true
+        //minDate: -3,
+        //maxDate: '1w',
+        //showMonthAfterYear: true
+        
+        beforeShowDay: function(date){
+            var dayOfWeek = date.getDay();
+            if(dayOfWeek==0 || dayOfWeek==6) return [false];
+            else return [true];
+        }
+        defaultDate: 2
+    });*/
+    $('#date').datepicker();
+/*
+    var books = ['Web development with J2EE', 'Practical css & javascript', 
+    'Practical ruby on rails', 'Introduction to HTML & css', 'jQuery UI'];
+    $('#book').autocomplete({
+        source: books,
+        open: function(event){
+            var $ul = $(this).autocomplete('widget');
+            $ul.hide().slideDown(600);
+        },
+        minLength:0
+    }).focus(function(event){
+        $(this).autocomplete('search','');
+    });
+    
+*/
+    $('#book').autocomplete({
+        source: function(request, callback){
+            var books = ['Web development with J2EE', 'Practical css & javascript', 
+    'Practical ruby on rails', 'Introduction to HTML & css', 'jQuery UI'];
+        callback(books);
+        }
+    });
+    $('#book').removeClass('ui-button');
 });
