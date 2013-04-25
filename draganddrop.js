@@ -41,5 +41,31 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#div2').selectable();
+	$('#div2').selectable({
+		start: function(event){
+			$('#result').html($('#result').html() + '<b>start</b>');
+		},
+
+		stop: function(event){
+			$('#result').html($('#result').html() + ', stop');
+		},
+
+		selecting: function(event, ui){
+			$('#result').html($('#result').html() + ', selecting');
+		},
+
+		unselecting: function(event, ui){
+			$('#result').html($('#result').html() + ', unselecting');
+		},
+
+		selected: function(event, ui){
+			$('#result').html($('#result').html() + ', selected');
+		},
+
+		unselected: function(event, ui){
+			$('#result').html($('#result').html() + 'unselected');
+		},
+		//filter: 'p:first-child'
+		distance: 1
+	});
 });
