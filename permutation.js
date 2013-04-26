@@ -50,4 +50,44 @@ $(document).ready(function() {
 		connectWith: '#div1'
 	});
 
+	$('#covers img').draggable({
+		revert: 'invalid',
+		connectToSortable: '#titles'
+	});
+
+	$('#titles').sortable({
+		placeholder: 'placeholder',
+		forcePlaceholderSize: true,
+		sort: function(event, ui){
+			ui.placeholder[0].height = ui.helper[0].height;
+			ui.placeholder[0].src = ui.helper[0].src;
+		},
+		receive: function(event, ui){
+			ui.item.draggable('destroy');
+		}
+
+	});
+
+	$('#resize').resizable({
+		//autoHide: true,
+		//ghost: true
+
+		//start: function(event, ui){
+		//	$('#dimension').text('width = ' + ui.originalSize.width + ', height = '
+		//		+ ui.originalSize.height);
+		//},
+		resize: function(event, ui){
+			$('#dimension').text('width = ' + ui.size.width + ', height = '
+				+ ui.size.height + 'top: ' + ui.position.top);
+		}, 
+		//animate: true, 
+		helper: 'helper'
+	});
+
+	$('#test1').resizable({
+		handles: "e"
+	});
+
+	$('#test2').resizable();
+
 });

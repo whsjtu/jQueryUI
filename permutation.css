@@ -1,11 +1,20 @@
-#div1{
+/*#div1{
 	width: 200px;
 }
 
 #div2{
 	width: 100px;
 }
-
+*/
 p.ui-sortable-helper {
 	color: red;
+}
+
+.placeholder {
+	height: 80px;
+}
+
+
+.helper {
+	border: dotted 1px red;
 }
